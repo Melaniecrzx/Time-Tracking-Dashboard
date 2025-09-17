@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracking Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <main>
+        <section class="profile section">
+                <div class="profile-card">
+                    <img src="images/image-jeremy.png" alt="Jeremy picture" class="profile-image">
+                    <div class="profile-info">
+                        <p class="profile-report">Report for</p>
+                        <h1 class="profile-name">Jeremy Robson</h1>
+                    </div>
+                </div>
+                <div class="profile-timeframe">
+                    <button class="timeframe-btn daily">Daily</button>
+                    <button class="timeframe-btn weekly">Weekly</button>
+                    <button class="timeframe-btn monthly">Monthly</button>
+                </div>
+        </section>
+        <section class="work section">
+            <img src="images/icon-work.svg" alt="work icon" class="icon">
+            <div class="card">
+                <div class="description">
+                    <p class="title">Work</p>
+                    <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="icon-ellipsis">
+                </div>
+                <div class="time-container">
+                    <p class="current"></p>
+                    <p class="previous"></p>
+                </div>
+            </div>
+        </section>
+        <section class="play section">
+            <img src="images/icon-play.svg" alt="play icon" class="icon">
+            <div class="card">
+                <div class="description">
+                    <p class="title">Play</p>
+                    <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="icon-ellipsis">
+                </div>
+                <div class="time-container">
+                    <p class="current"></p>
+                    <p class="previous"></p>
+                </div>
+            </div>
+        </section>
+        <section class="study section">
+            <img src="images/icon-study.svg" alt="study icon" class="icon">
+            <div class="card">
+                <div class="description">
+                    <p class="title">Study</p>
+                    <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="icon-ellipsis">
+                </div>
+                <div class="time-container">
+                    <p class="current"></p>
+                    <p class="previous"></p>
+                </div>
+            </div>
+        </section>
+        <section class="exercise section">
+            <img src="images/icon-exercise.svg" alt="exercise icon" class="icon">
+            <div class="card">
+                <div class="description">
+                    <p class="title">Exercise</p>
+                    <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="icon-ellipsis">
+                </div>
+                <div class="time-container">
+                    <p class="current"></p>
+                    <p class="previous"></p>
+                </div>
+            </div>
+        </section>
+        <section class="social section">
+            <img src="images/icon-social.svg" alt="social icon" class="icon">
+            <div class="card">
+                <div class="description">
+                    <p class="title">Social</p>
+                    <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="icon-ellipsis">
+                </div>
+                <div class="time-container">
+                    <p class="current"></p>
+                    <p class="previous"></p>
+                </div>
+            </div>
+        </section>
+        <section class="self-care section">
+            <img src="images/icon-self-care.svg" alt="self-care icon" class="icon">
+            <div class="card">
+                <div class="description">
+                    <p class="title">Self Care</p>
+                    <img src="images/icon-ellipsis.svg" alt="ellipsis icon" class="icon-ellipsis">
+                </div>
+                <div class="time-container">
+                    <p class="current"></p>
+                    <p class="previous"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

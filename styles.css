@@ -1,0 +1,315 @@
+:root  {
+    --white: #fff;
+    --black: #000;
+    --navy950: hsl(226, 43%, 10%);
+    --navy900: hsl(235, 46%, 20%);
+    --navy800: hsl(235, 41%, 34%);
+    --navy200: hsl(236, 100%, 87%);
+    --orange300: hsl(15, 100%, 70%);
+    --purple700: hsl(264, 64%, 52%);
+    --purple600: hsl(246, 80%, 60%);
+    --purple500: hsl(235, 45%, 61%);
+    --blue300: hsl(195, 74%, 62%);
+    --pink400: hsl(348, 100%, 68%);
+    --green400: hsl(145, 58%, 55%);
+    --yellow300: hsl(43, 84%, 65%);
+    --grey200: hsl(0, 0%, 85%);
+
+    --text1: 300 56px/66px 'Rubik', sans-serif;
+    --text2: 300 40px/47px 'Rubik', sans-serif;
+    --text3: 300 32px/38px 'Rubik', sans-serif;
+    --text4: 300 24px/28px 'Rubik', sans-serif;
+    --text5: 500 18px/21px 'Rubik', sans-serif;
+    --text6: 400 18px/21px 'Rubik', sans-serif;
+    --text7: 400 15px/18px 'Rubik', sans-serif;
+
+    --space8: 0.5rem;
+    --space16: 1rem;
+    --space24: 1.5rem;
+    --space32: 2rem;
+    --space40: 2.5rem;
+}
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--navy950);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section {
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.profile {
+    background-color: var(--navy900);
+}
+.profile-card {
+    background-color: var(--purple600);
+    display: flex;
+    border-radius: 15px;
+    padding: var(--space32);
+    gap: var(--space24);
+}
+.profile-image {
+    border: 3px solid var(--white);
+    border-radius: 50%;
+}
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space8);
+}
+.profile-report {
+    font: var(--text7);
+    color: var(--navy200);
+}
+.profile-timeframe {
+    display: flex;
+}
+.profile-name {
+    color: var(--white);
+}
+.timeframe-btn {
+    font: var(--text6);
+    color: var(--purple500);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.timeframe-btn.active {
+    color: var(--white);
+}
+.work {
+    background-color: var(--orange300);
+}
+.play {
+    background-color: var(--blue300);
+}
+.study {
+    background-color: var(--pink400);
+}
+.exercise {
+    background-color: var(--green400);
+}
+.social {
+    background-color: var(--purple700);
+}
+.self-care {
+    background-color: var(--yellow300);
+}
+.card {
+    background-color: var(--navy900);
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: var(--space24);
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.icon {
+    position: absolute;
+    z-index: 0;
+    right: 1.07rem;
+    top: -0.669rem
+}
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title {
+    font: var(--text5);
+    color: var(--white);
+}
+.time-container {
+    display: flex;
+}
+.current {
+    color: var(--white);
+}
+.previous {
+    color:var(--navy200)
+}
+@media screen and (max-width: 767px) {
+    main {
+        display: grid;
+        grid-template-rows: repeat(7, auto); 
+        gap: var(--space24);
+        padding: 5rem;
+    }
+    .profile-image {
+        width: 64px;
+    }
+    .section {
+        width: 20.438rem;
+    }
+    .work, .play, .study, .exercise, .social, .self-care {
+        height: 10rem;
+    }
+    .card {
+        top: 2.375rem;
+        gap: var(--space8);
+    }
+    .profile-name {
+        font: var(--text4);
+    }
+    .profile-card {
+        gap: var(--space24);
+        align-items: center;
+    }
+    .profile-timeframe {
+        justify-content: space-evenly;
+        padding-block: var(--space24);
+    }
+    .time-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .current {
+        font: var(--text3);
+    }
+    .previous {
+        font: var(--text7);
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+            "profile profile profile"
+            "work play study"
+            "exercise social self-care";
+        gap: var(--space24);
+    }
+    .profile {
+        grid-area: profile;
+        height: 12.688rem;
+    }
+    .work {
+        grid-area: work;
+    }
+    .play {
+        grid-area: play;
+    }
+    .study {
+        grid-area: study;
+    }
+    .exercise {
+        grid-area: exercise;
+    }
+    .social {
+        grid-area: social;
+    }
+    .self-care {
+        grid-area: self-care;
+    }
+    .profile-image {
+        width: 64px;
+    }
+    .work, .play, .study, .exercise, .social, .self-care {
+        width: 11.75rem;
+        height: 13.313rem
+    }
+    .card {
+        top: var(--space32);
+        gap: var(--space16)
+    }
+    .profile-name {
+    font: var(--text4);
+    }
+    .profile-card {
+        gap: var(--space24);
+        align-items: center;
+    }
+    .profile-timeframe {
+        justify-content: space-evenly;
+        padding-block: var(--space24);
+    }
+    .time-container {
+        flex-direction: column;
+        gap: var(--space8);
+    }
+    .current {
+        font: var(--text1);
+    }
+    .previous {
+        font: var(--text7);
+    }
+}
+@media screen and (min-width: 1440px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+            "profile work play study"
+            "profile exercise social self-care";
+        gap: var(--space32);
+    }
+    .profile {
+        grid-area: profile;
+    }
+    .work {
+        grid-area: work;
+    }
+    .play {
+        grid-area: play;
+    }
+    .study {
+        grid-area: study;
+    }
+    .exercise {
+        grid-area: exercise;
+    }
+    .social {
+        grid-area: social;
+    }
+    .self-care {
+        grid-area: self-care;
+    }
+    .section {
+        width: 15.938rem
+    }
+    .work, .play, .study, .exercise, .social, .self-care {
+        height: 15.25rem
+    }
+    .card {
+        top: 2.813rem;
+        gap: var(--space24);
+    }
+    .profile-image {
+        width: 78px;
+    }
+    .profile-name {
+        font: var(--text2);
+    }
+    .profile-card {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding-bottom: 5.75rem;
+    }
+    .profile-timeframe {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: var(--space32);
+        align-items: flex-start;
+    }
+    .time-container {
+        flex-direction: column;
+        gap: var(--space8);
+    }
+    .current {
+        font: var(--text1);
+    }
+    .previous {
+        font: var(--text7);
+    }
+}
