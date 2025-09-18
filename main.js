@@ -2,7 +2,7 @@ const buttons = document.querySelectorAll('.timeframe-btn'); // Select all butto
 
 let hours = []; // Array to hold the hours data
 
-fetch('./data.json')
+fetch('data.json')
 .then((response) => {  // Fetch the JSON data  + then : promise method
     if(!response.ok) return console.log('Oops! Something went wrong.');
 
