@@ -1,7 +1,7 @@
 const buttons = document.querySelectorAll('.timeframe-btn'); // Select all buttons
 
 let hours = []; // Array to hold the hours data
-/*
+
 fetch('data.json')
   .then((response) => {  // Fetch the JSON data  + then : promise method
     if(!response.ok) {
@@ -12,21 +12,8 @@ fetch('data.json')
   .then((data) => {
     hours = data; // Store the fetched data in the hours array
     updateHours('weekly'); // Initial call to display weekly data
-  });*/
-
-  fetch('./data.json')
-  .then((response) => {
-    console.log('Response:', response);
-    if (!response.ok) throw new Error('Fetch failed: ' + response.status);
-    return response.json();
-  })
-  .then((data) => {
-    console.log('Data loaded:', data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
   });
-
+  
 function updateHours(period) {
   const timeContainer = document.querySelectorAll('.time-container'); // Select all time containers
   hours.forEach((activity, index) => {    //activity : an object title + timeframes and index: 0 for work...
