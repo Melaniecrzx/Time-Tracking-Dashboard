@@ -32,32 +32,22 @@ function updateHours(period) {
   });
 }
 
-buttons.forEach((btn)=> {
+function setActive(currentBtn, allBtns) {
+  allBtns.forEach (btn => btn.classList.remove('active')); // Remove active class from all buttons
+  currentBtn.classList.add('active'); // Add active class to the clicked button
+}
+
+buttons.forEach((btn) => {
   btn.addEventListener('click', () => {
     if (btn.classList.contains('daily')) {
-      updateHours('daily'); // Update hours for daily
-      btn.classList.add('active');
-      buttons.forEach((otherBtn) => {
-        if (otherBtn !== btn) {
-          otherBtn.classList.remove('active');
-        }
-      });
+      updateHours('daily'); 
+      setActive(btn, buttons);
     } else if (btn.classList.contains('weekly')) {
-      updateHours('weekly'); // Update hours for weekly
-      btn.classList.add('active');
-      buttons.forEach((otherBtn) => {
-        if (otherBtn !== btn) {
-          otherBtn.classList.remove('active');
-        }
-      });
+      updateHours('weekly'); 
+      setActive(btn, buttons);
     } else if (btn.classList.contains('monthly')) {
-      updateHours('monthly'); // Update hours for monthly
-      btn.classList.add('active');
-      buttons.forEach((otherBtn) => {
-        if (otherBtn !== btn) {
-          otherBtn.classList.remove('active');
-        }
-      });
+      updateHours('monthly'); 
+      setActive(btn, buttons);
     }
   });
 });
