@@ -1,15 +1,30 @@
 const buttons = document.querySelectorAll('.timeframe-btn'); // Select all buttons
 
 let hours = []; // Array to hold the hours data
-
+/*
 fetch('data.json')
-.then((response) => {  // Fetch the JSON data  + then : promise method
-    if(!response.ok) return console.log('Oops! Something went wrong.');
-
+  .then((response) => {  // Fetch the JSON data  + then : promise method
+    if(!response.ok) {
+      return console.log('Oops! Something went wrong.');
+    }
     return response.json();
-  }).then((data) => {
+  })
+  .then((data) => {
     hours = data; // Store the fetched data in the hours array
     updateHours('weekly'); // Initial call to display weekly data
+  });*/
+
+  fetch('./data.json')
+  .then((response) => {
+    console.log('Response:', response);
+    if (!response.ok) throw new Error('Fetch failed: ' + response.status);
+    return response.json();
+  })
+  .then((data) => {
+    console.log('Data loaded:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
   });
 
 function updateHours(period) {
