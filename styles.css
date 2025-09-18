@@ -116,6 +116,10 @@ body {
     display: flex;
     flex-direction: column;
 }
+.card:hover {
+    cursor: pointer;
+    background-color: var(--navy800);
+}
 .icon {
     position: absolute;
     z-index: 0;

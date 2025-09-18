@@ -13,7 +13,7 @@ fetch('data.json')
     hours = data; // Store the fetched data in the hours array
     updateHours('weekly'); // Initial call to display weekly data
   });
-  
+
 function updateHours(period) {
   const timeContainer = document.querySelectorAll('.time-container'); // Select all time containers
   hours.forEach((activity, index) => {    //activity : an object title + timeframes and index: 0 for work...
